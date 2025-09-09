@@ -1,0 +1,20 @@
+{
+  "title": "Reversal Effect in International Equity ETFs",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {},
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "start_date": "19-01-01",
+    "end_date": "20-12-31",
+    "markets_tested": [
+      "Developed",
+      "US"
+    ]
+  }
+}

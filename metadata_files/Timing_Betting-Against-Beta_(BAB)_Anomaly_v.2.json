@@ -1,0 +1,21 @@
+{
+  "title": "Timing Betting-Against-Beta (BAB) Anomaly v.2",
+  "tags": [],
+  "asset_classes": [
+    "options"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.28
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

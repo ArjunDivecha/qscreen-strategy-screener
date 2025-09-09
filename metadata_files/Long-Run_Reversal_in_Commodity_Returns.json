@@ -1,0 +1,24 @@
+{
+  "title": "Long-Run Reversal in Commodity Returns",
+  "tags": [],
+  "asset_classes": [
+    "commodities"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.83
+  },
+  "implementation": {},
+  "market_conditions": {
+    "market_types": [
+      "bull",
+      "bear"
+    ]
+  },
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

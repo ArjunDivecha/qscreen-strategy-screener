@@ -1,0 +1,25 @@
+{
+  "title": "Network Momentum across Asset Classes",
+  "tags": [],
+  "asset_classes": [
+    "stocks",
+    "futures"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.36
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {
+    "market_types": [
+      "momentum"
+    ]
+  },
+  "backtest_period": {
+    "start_date": "19-01-01",
+    "end_date": "20-12-31"
+  }
+}

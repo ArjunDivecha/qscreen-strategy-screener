@@ -1,0 +1,10 @@
+{
+  "primary": {
+    "id": "openai/gpt-oss-120b",
+    "label": "GPT-OSS 120B"
+  },
+  "secondary": {
+    "id": "moonshotai/kimi-k2-instruct",
+    "label": "Kimi K2 Instruct (1T)"
+  }
+}

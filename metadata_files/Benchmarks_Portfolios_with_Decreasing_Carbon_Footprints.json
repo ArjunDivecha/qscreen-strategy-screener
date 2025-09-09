@@ -1,0 +1,17 @@
+{
+  "title": "Benchmarks Portfolios with Decreasing Carbon Footprints",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.5
+  },
+  "implementation": {},
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

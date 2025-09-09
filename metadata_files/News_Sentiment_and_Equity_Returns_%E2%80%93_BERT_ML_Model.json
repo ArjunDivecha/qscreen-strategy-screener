@@ -1,0 +1,23 @@
+{
+  "title": "News Sentiment and Equity Returns \u2013 BERT ML Model",
+  "tags": [],
+  "asset_classes": [
+    "stocks"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.29
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "start_date": "20-01-01",
+    "end_date": "20-12-31",
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

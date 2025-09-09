@@ -1,0 +1,19 @@
+{
+  "title": "Trading Options During Expiration Weekends",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "annual_return": 0.016200000000000003
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

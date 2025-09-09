@@ -1,0 +1,16 @@
+{
+  "title": "Financial Integration and Currency Returns",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.48,
+    "annual_return": 0.05283
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

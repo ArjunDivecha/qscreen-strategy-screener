@@ -1,0 +1,23 @@
+{
+  "title": "Volatility effect in the Chinese A-share market",
+  "tags": [],
+  "asset_classes": [
+    "etf",
+    "stocks"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.61
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "Developed",
+      "US"
+    ]
+  }
+}

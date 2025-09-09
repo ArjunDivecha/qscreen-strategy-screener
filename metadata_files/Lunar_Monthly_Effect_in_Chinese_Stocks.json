@@ -1,0 +1,20 @@
+{
+  "title": "Lunar Monthly Effect in Chinese Stocks",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.88,
+    "annual_return": 0.04463
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

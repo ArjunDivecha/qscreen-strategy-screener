@@ -1,0 +1,23 @@
+{
+  "title": "52-Week High Bond Alpha Strategy",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.3
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {
+    "market_types": [
+      "bear"
+    ]
+  },
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

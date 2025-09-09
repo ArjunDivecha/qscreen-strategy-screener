@@ -1,0 +1,27 @@
+{
+  "title": "Antifragile Asset Allocation",
+  "tags": [],
+  "asset_classes": [
+    "etf"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 2.53,
+    "max_drawdown": 0.03
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {
+    "market_types": [
+      "stable",
+      "volatile"
+    ]
+  },
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

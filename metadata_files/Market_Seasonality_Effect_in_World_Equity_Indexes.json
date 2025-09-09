@@ -1,0 +1,22 @@
+{
+  "title": "Market Seasonality Effect in World Equity Indexes",
+  "tags": [],
+  "asset_classes": [
+    "bonds",
+    "stocks"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {},
+  "implementation": {},
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "Developed",
+      "Europe",
+      "Global",
+      "US",
+      "Emerging"
+    ]
+  }
+}

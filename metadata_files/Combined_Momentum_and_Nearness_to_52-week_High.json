@@ -1,0 +1,15 @@
+{
+  "title": "Combined Momentum and Nearness to 52-week High",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.01
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

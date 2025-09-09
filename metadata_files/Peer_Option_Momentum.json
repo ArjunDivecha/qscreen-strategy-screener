@@ -1,0 +1,17 @@
+{
+  "title": "Peer Option Momentum",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 3.52,
+    "annual_return": 0.0521
+  },
+  "implementation": {
+    "trading_frequency": "daily",
+    "complexity": "low"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

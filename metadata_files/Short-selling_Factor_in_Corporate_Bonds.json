@@ -1,0 +1,16 @@
+{
+  "title": "Short-selling Factor in Corporate Bonds",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.0,
+    "annual_return": 0.075
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

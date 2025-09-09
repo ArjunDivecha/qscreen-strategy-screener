@@ -1,0 +1,16 @@
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+.env*.local
+
+# API Keys and secrets
+*.key
+*.pem
+secrets.json
+credentials.json
+config.json
+

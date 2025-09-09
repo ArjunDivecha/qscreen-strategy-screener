@@ -1,0 +1,24 @@
+{
+  "title": "Volatility Investing Across Asset Classes",
+  "tags": [],
+  "asset_classes": [
+    "bonds",
+    "etf",
+    "forex",
+    "futures"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.05
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

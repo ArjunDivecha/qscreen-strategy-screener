@@ -1,0 +1,21 @@
+{
+  "title": "Machine Learning and Stock Anomalies in China",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.78,
+    "annual_return": 0.0212
+  },
+  "implementation": {
+    "trading_frequency": "monthly",
+    "complexity": "high"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

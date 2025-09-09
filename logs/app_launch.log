@@ -1,0 +1,86 @@
+[2025-03-20 14:48:08] ERROR: Flask is not installed in the virtual environment
+[2025-03-20 14:48:46] ERROR: Flask is not installed in the virtual environment
+[2025-03-20 14:54:11] ERROR: Flask is not installed in the virtual environment
+[2025-03-20 14:57:28] ERROR: Flask is not installed. Please install it with 'pip install flask'
+[2025-03-20 15:00:05] ERROR: Flask is not installed. Please install it with 'pip install flask'
+[2025-03-20 15:00:16] ERROR: Flask is not installed. Please install it with 'pip install flask'
+[2025-03-20 15:04:50] ERROR: Flask is not installed. Please install it with 'pip install flask'
+[2025-03-20 15:07:31] STEP 1: Checking for existing processes
+[2025-03-20 15:07:31] STEP 3: Launching new instance
+[2025-03-20 15:07:31] Launching Flask application...
+[2025-03-20 15:07:31] Starting Flask server...
+[2025-03-20 15:07:31] Waiting for Flask server to start...
+OpenAI API key found
+Anthropic API key found
+
+Starting server at http://127.0.0.1:8092
+Press Ctrl+C to quit
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8092
+ * Running on http://10.1.10.181:8092
+[33mPress CTRL+C to quit[0m
+[2025-03-20 15:07:34] STEP 4: Opening application in browser
+[2025-03-20 15:07:34] Application started successfully!
+127.0.0.1 - - [20/Mar/2025 15:07:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Mar/2025 15:07:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [20/Mar/2025 15:07:35] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Mar/2025 15:07:42] "GET /api/strategies?sort_by=sharpe HTTP/1.1" 200 -
+[2025-03-20 15:08:28] ERROR: Flask is not installed. Please install it with 'pip install flask'
+127.0.0.1 - - [20/Mar/2025 15:11:05] "HEAD / HTTP/1.1" 200 -
+[2025-03-20 15:15:04] STEP 1: Checking for existing processes
+[2025-03-20 15:15:04] Found existing process with PID 42242, killing it...
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-03-20 15:15:05] STEP 3: Launching new instance
+[2025-03-20 15:15:05] Launching Flask application...
+[2025-03-20 15:15:05] Starting Flask server...
+[2025-03-20 15:15:05] Waiting for Flask server to start...
+OpenAI API key found
+Anthropic API key found
+
+Starting server at http://127.0.0.1:8092
+Press Ctrl+C to quit
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8092
+ * Running on http://10.1.10.181:8092
+Press CTRL+C to quit
+[2025-03-20 15:15:09] STEP 4: Opening application in browser
+[2025-03-20 15:15:09] Application started successfully!
+127.0.0.1 - - [20/Mar/2025 15:15:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Mar/2025 15:15:16] "GET /api/strategies?sort_by=sharpe HTTP/1.1" 200 -
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-03-20 20:51:47] STEP 1: Checking for existing processes
+[2025-03-20 20:51:47] STEP 3: Launching new instance
+[2025-03-20 20:51:47] Launching Flask application...
+[2025-03-20 20:51:47] Starting Flask server...
+[2025-03-20 20:51:47] Waiting for Flask server to start...
+OpenAI API key found
+Anthropic API key found
+
+Starting server at http://127.0.0.1:8092
+Press Ctrl+C to quit
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8092
+ * Running on http://10.0.1.45:8092
+Press CTRL+C to quit
+[2025-03-20 20:51:50] STEP 4: Opening application in browser
+[2025-03-20 20:51:50] Application started successfully!
+127.0.0.1 - - [20/Mar/2025 20:51:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Mar/2025 20:51:50] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [20/Mar/2025 20:51:59] "GET /api/strategies?sort_by=sharpe HTTP/1.1" 200 -
+/opt/anaconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-03-20 20:54:35] ERROR: Flask is not installed. Please install it with 'pip install flask'

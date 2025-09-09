@@ -1,0 +1,19 @@
+{
+  "title": "Trend-Following Strategy in Cryptocurrencies",
+  "tags": [],
+  "asset_classes": [
+    "forex",
+    "crypto"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.38,
+    "annual_return": 0.449
+  },
+  "implementation": {
+    "trading_frequency": "daily"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

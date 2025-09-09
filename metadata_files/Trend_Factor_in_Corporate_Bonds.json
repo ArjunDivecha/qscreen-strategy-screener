@@ -1,0 +1,22 @@
+{
+  "title": "Trend Factor in Corporate Bonds",
+  "tags": [],
+  "asset_classes": [
+    "crypto"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 2.21,
+    "annual_return": 0.013000000000000001
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

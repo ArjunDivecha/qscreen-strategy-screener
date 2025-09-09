@@ -1,0 +1,17 @@
+{
+  "title": "Bottom-Up LASSO Strategy Using 10K Reports to Predict Stocks\u2019 Performance",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.71,
+    "annual_return": 0.0048
+  },
+  "implementation": {
+    "trading_frequency": "monthly",
+    "complexity": "low"
+  },
+  "market_conditions": {},
+  "backtest_period": {}
+}

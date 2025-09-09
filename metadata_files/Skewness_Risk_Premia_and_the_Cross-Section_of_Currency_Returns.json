@@ -1,0 +1,22 @@
+{
+  "title": "Skewness Risk Premia and the Cross-Section of Currency Returns",
+  "tags": [],
+  "asset_classes": [
+    "forex"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.8,
+    "annual_return": 0.0564
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

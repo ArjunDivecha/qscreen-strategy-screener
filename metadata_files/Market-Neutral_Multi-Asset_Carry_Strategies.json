@@ -1,0 +1,23 @@
+{
+  "title": "Market-Neutral Multi-Asset Carry Strategies",
+  "tags": [],
+  "asset_classes": [
+    "futures"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 1.37,
+    "max_drawdown": 0.098,
+    "annual_return": 0.055999999999999994
+  },
+  "implementation": {
+    "trading_frequency": "monthly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "Developed"
+    ]
+  }
+}

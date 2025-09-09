@@ -1,0 +1,20 @@
+{
+  "title": "Leveraging the Low-Volatility Effect",
+  "tags": [],
+  "asset_classes": [],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "annual_return": 0.019
+  },
+  "implementation": {
+    "trading_frequency": "monthly",
+    "complexity": "low"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}

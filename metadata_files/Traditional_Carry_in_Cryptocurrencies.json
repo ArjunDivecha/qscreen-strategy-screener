@@ -1,0 +1,23 @@
+{
+  "title": "Traditional Carry in Cryptocurrencies",
+  "tags": [],
+  "asset_classes": [
+    "forex",
+    "crypto"
+  ],
+  "strategy_type": "",
+  "description": "We\u2019ve already analyzed tens of thousands of financial research papers and identified more than 700 attractive trading systems together with hundreds of related academic papers.",
+  "performance_metrics": {
+    "sharpe_ratio": 0.77,
+    "annual_return": 0.46708
+  },
+  "implementation": {
+    "trading_frequency": "weekly"
+  },
+  "market_conditions": {},
+  "backtest_period": {
+    "markets_tested": [
+      "US"
+    ]
+  }
+}
