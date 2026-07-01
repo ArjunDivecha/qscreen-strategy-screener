@@ -14,3 +14,7 @@ secrets.json
 credentials.json
 config.json
 
+# Python
+__pycache__/
+*.pyc
+
