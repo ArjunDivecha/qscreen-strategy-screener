@@ -1,0 +1,416 @@
+<meta charset="UTF-8">
+<title>The Ledger — An Out-of-Sample Audit of 800 Published Trading Strategies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --paper: #eff2eb;
+    --surface: #fbfbf8;
+    --surface-alt: #e7ebe2;
+    --ink: #1b2420;
+    --ink-secondary: #52625a;
+    --ink-muted: #8b958d;
+    --hairline: #d7dcd2;
+    --hairline-strong: #b9c2b2;
+    --accent: #96692a;
+    --accent-soft: #e8dcc5;
+    --gain: #0b7a2e;
+    --loss: #b23030;
+
+    --cat-equities: #1b8449;
+    --cat-currencies: #0a9a9a;
+    --cat-bonds: #235d99;
+    --cat-crypto: #6a3fb0;
+    --cat-reits: #a32350;
+    --cat-multiasset: #c1502a;
+    --cat-other: #6b7a2e;
+    --cat-commodities: #a66e00;
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body { padding-bottom: 4rem; }
+
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible, .th-sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
+  }
+
+  /* ---------------- Masthead ---------------- */
+  .masthead {
+    border-bottom: 3px double var(--ink);
+    padding: clamp(2rem, 5vw, 3.5rem) 0 1.75rem;
+  }
+  .masthead .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+  .masthead .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 26px; height: 1px;
+    background: var(--accent);
+  }
+  h1.title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.9rem 0;
+    text-wrap: balance;
+    max-width: 18ch;
+  }
+  .masthead .dek {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    color: var(--ink-secondary);
+    max-width: 62ch;
+    line-height: 1.55;
+    margin: 0;
+  }
+  .masthead .dek strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------------- Stat strip ---------------- */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--hairline-strong);
+    border: 1px solid var(--hairline-strong);
+    margin: 2rem 0 0;
+  }
+  .stat-tile {
+    background: var(--surface);
+    padding: 1.1rem 1.2rem 1.25rem;
+  }
+  .stat-tile .label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+  }
+  .stat-tile .value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .stat-tile .value.gain { color: var(--gain); }
+  .stat-tile .value.loss { color: var(--loss); }
+  .stat-tile .sub { font-size: 0.78rem; color: var(--ink-secondary); margin-top: 0.3rem; }
+
+  /* ---------------- Sections ---------------- */
+  section.block { padding: 3rem 0; border-bottom: 1px solid var(--hairline); }
+  section.block:last-of-type { border-bottom: none; }
+
+  .section-head { margin-bottom: 1.6rem; }
+  .section-head .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  h2.section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 0.5rem 0;
+    text-wrap: balance;
+  }
+  .section-head p.lede {
+    color: var(--ink-secondary);
+    max-width: 68ch;
+    line-height: 1.6;
+    font-size: 0.98rem;
+    margin: 0.4rem 0 0;
+  }
+
+  .method-note {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--accent);
+    padding: 1.1rem 1.4rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-secondary);
+    margin-top: 1.2rem;
+  }
+  .method-note strong { color: var(--ink); }
+
+  /* ---------------- Charts ---------------- */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 1.3rem 1.4rem 1rem;
+    overflow: hidden;
+  }
+  .chart-card h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin: 0 0 0.15rem;
+  }
+  .chart-card .chart-sub {
+    font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.8rem;
+  }
+  .chart-card svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .axis-label { font-family: var(--font-mono); font-size: 9.5px; fill: var(--ink-muted); }
+  .grid-line { stroke: var(--hairline); stroke-width: 1; }
+  .zero-line { stroke: var(--ink-muted); stroke-width: 1; stroke-dasharray: 2 2; }
+  .ref-line { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.6; }
+  .dot { opacity: 0.72; }
+  .dot:hover { opacity: 1; stroke: var(--ink); stroke-width: 1; }
+  .bar-label { font-family: var(--font-mono); font-size: 11px; fill: var(--ink); }
+  .bar-value { font-family: var(--font-mono); font-size: 11px; font-weight: 600; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.9rem; font-size: 0.76rem; color: var(--ink-secondary); }
+  .legend .item { display: flex; align-items: center; gap: 0.4rem; }
+  .legend .swatch { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  /* ---------------- Category nav ---------------- */
+  .cat-nav {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin: 1.8rem 0 0;
+  }
+  .cat-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--hairline-strong);
+    padding: 0.35rem 0.7rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .cat-nav a:hover { border-color: var(--accent); color: var(--accent); }
+  .cat-nav .dot { width: 8px; height: 8px; border-radius: 50%; opacity: 1; }
+
+  /* ---------------- Category section ---------------- */
+  .cat-section { padding: 2.6rem 0; border-bottom: 1px solid var(--hairline); }
+  .cat-header {
+    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.6rem 1.5rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.7rem; margin-bottom: 1rem;
+  }
+  .cat-header .cat-name-wrap { display: flex; align-items: baseline; gap: 0.6rem; }
+  .cat-header .cat-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; transform: translateY(1px); }
+  .cat-header h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    margin: 0;
+  }
+  .cat-header .cat-stats {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--ink-secondary);
+    display: flex; gap: 1.2rem; flex-wrap: wrap;
+  }
+  .cat-header .cat-stats b { color: var(--ink); font-weight: 600; }
+
+  .highlight-strip {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 0.9rem;
+    margin-bottom: 1.1rem;
+  }
+  .highlight-strip img { width: 100%; height: auto; display: block; border: 1px solid var(--hairline); background: #fff; }
+  .highlight-strip .hl-body .hl-tag {
+    font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.25rem;
+  }
+  .highlight-strip .hl-body .hl-name { font-weight: 600; font-size: 0.98rem; margin-bottom: 0.3rem; }
+  .highlight-strip .hl-body .hl-figs { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink-secondary); display: flex; gap: 1rem; flex-wrap: wrap; }
+  @media (max-width: 640px) { .highlight-strip { grid-template-columns: 1fr; } .highlight-strip img { max-width: 200px; } }
+
+  /* ---------------- Table ---------------- */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--hairline); }
+  table.strat-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 1160px; }
+  table.strat-table td.name, table.strat-table th:nth-child(2) { min-width: 220px; }
+  table.strat-table thead th {
+    background: var(--surface-alt);
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--hairline-strong);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    position: sticky; top: 0;
+  }
+  table.strat-table thead th.num { text-align: right; }
+  table.strat-table thead th .arrow { opacity: 0.35; margin-left: 3px; font-size: 0.7em; }
+  table.strat-table thead th.sorted .arrow { opacity: 1; color: var(--accent); }
+  table.strat-table tbody td {
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  table.strat-table tbody tr:nth-child(even) { background: var(--surface); }
+  table.strat-table tbody tr:hover { background: var(--accent-soft); }
+  table.strat-table td.num, table.strat-table th.num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  table.strat-table td.name a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline-strong); }
+  table.strat-table td.name a:hover { color: var(--accent); border-color: var(--accent); }
+  table.strat-table td.name .meta { display: block; font-size: 0.72rem; color: var(--ink-muted); margin-top: 0.1rem; }
+  .gain-text { color: var(--gain); font-weight: 600; }
+  .loss-text { color: var(--loss); font-weight: 600; }
+  .dash { color: var(--ink-muted); }
+  .note-text { font-size: 0.76rem; color: var(--ink-muted); font-style: italic; }
+  .rank-badge {
+    font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted);
+  }
+
+  .table-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.7rem 0.2rem 0;
+    font-size: 0.8rem; color: var(--ink-secondary);
+  }
+  .expand-btn {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+  }
+  .expand-btn:hover { background: var(--accent); }
+  tr.hidden-row { display: none; }
+
+  /* ---------------- Footer ---------------- */
+  footer.colophon {
+    padding: 2.5rem 0 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+  footer.colophon h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0 0 0.6rem;
+  }
+  footer.colophon code {
+    font-family: var(--font-mono);
+    background: var(--surface-alt);
+    padding: 0.05rem 0.35rem;
+    font-size: 0.78rem;
+    word-break: break-all;
+  }
+  footer.colophon ul { padding-left: 1.1rem; margin: 0.4rem 0 1.2rem; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Quantpedia × QuantConnect — Reproducibility Audit</div>
+    <h1 class="title">The Ledger</h1>
+    <p class="dek">
+      800 published trading strategies, each independently re-run by QuantConnect from
+      2000 to today. This audit splits every equity curve at the exact year the original
+      academic paper's data stopped, isolating the years the paper <strong>never saw</strong> —
+      and measures what actually happened in them.
+    </p>
+    <div class="stat-strip" id="hero-stats"></div>
+  </header>
+
+  <section class="block" id="overview">
+    <div class="section-head">
+      <div class="kicker">Section 01</div>
+      <h2 class="section-title">Claim vs. Reality</h2>
+      <p class="lede">
+        Every strategy in this ledger arrives with a number attached — the "Indicative
+        Performance" the source paper reported. Plotted against what QuantConnect's
+        simulation actually returned after the paper's data window closed, the gap
+        between promise and persistence becomes a shape.
+      </p>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-card">
+        <h3>Paper's claimed return vs. true out-of-sample CAGR</h3>
+        <div class="chart-sub">One dot per strategy · dashed line marks where OOS would equal the paper's claim exactly</div>
+        <div id="scatter-chart"></div>
+      </div>
+      <div class="chart-card">
+        <h3>Median out-of-sample CAGR by category</h3>
+        <div class="chart-sub">Ranked, with the corpus median as a reference line</div>
+        <div id="category-bar-chart"></div>
+      </div>
+    </div>
+
+    <div class="method-note">
+      <strong>How the split works —</strong> the "Backtest period from source paper" field
+      (e.g. "1961–2018") states the years of data the original paper used. QuantConnect's
+      re-implementation always simulates from 2000-01-01 forward, so this ledger cuts each
+      strategy's daily equity curve at January 1 of (paper end year + 1). Everything after
+      that date is data the paper's authors never had — a genuine out-of-sample test. Years
+      before the cut overlap the paper's own sample and are shown only as context, never as
+      validation. Strategies whose paper period runs up to (or past) the last available
+      backtest date have no OOS window and are marked "insufficient data" rather than scored.
+    </div>
+
+    <nav class="cat-nav" id="cat-nav"></nav>
+  </section>
+
+  <div id="categories-container"></div>
+
+  <footer class="colophon">
+    <h4>Notes on this ledger</h4>
+    <ul id="footnote-list"></ul>
+    <div id="provenance"></div>
+  </footer>
+
+</div>
+
+<script id="report-data" type="application/json">__REPORT_DATA_JSON__</script>
+<script>
+__REPORT_JS__
+</script>
